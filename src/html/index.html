@@ -8,53 +8,41 @@
     <meta name="description" content="" />
     <meta name="apple-mobile-web-app-capable" content="no" />
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-main.css" />
     <link rel="stylesheet" type="text/css" href="../css/style-reset.css"/>
     <script src="../js/jquery1121.js"></script>
 </head>
 <body>
-<%
-    var siteName="云南星月嫂之家，母婴行业护理领航者";
-%>
-<div class="siteTop">
-    <div class="topBarWrap">
-        <div class="topBar mid1200">
-            <div class="hotArea">
-                热门城市
-                [
-                <a href="#">曲靖</a>
-                <a href="#">文山</a>
-                <a href="#">红河</a>
-                <a href="#">昭通</a>
-                <a href="#">西双版纳</a>
-                ]
-            </div>
-            <div class="hotNews">
-                昆明市张**女士 11：00 成功预约月嫂李四
-            </div>
-            <div class="user">
-                <a href="#">登录</a>&nbsp;|&nbsp;
-                <a href="#">注册</a>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-    <div class="siteInfo">
-        <div class="mid1200">
-            <a href="#" class="siteLogo" target="_blank" title="<%-siteName%>"><%-siteName%></a>
-            <h1 class="siteTitle">星月嫂之家</h1>
-            <div class="chgArea">
-                昆明<br>
-                <a href="#">[切换城市]</a>
-            </div>
-            <div class="clear"></div>
-            <h1>test</h1>
-        </div>
-    </div>
-</div>
+<% include siteTop.html %>
 <div class="divMain"></div>
 <div class="siteBtm">
-
+    <dl>
+        <dt>母婴服务</dt>
+        <dd><a href="#" title="内容" target="_blank">育婴师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">月嫂</a></dd>
+        <dd><a href="#" title="内容" target="_blank">育儿嫂</a></dd>
+        <dd><a href="#" title="内容" target="_blank">催乳师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">小儿推拿师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">保健按摩师</a></dd>
+        <dt>技能培训</dt>
+        <dd><a href="#" title="内容" target="_blank">母婴护理师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">育婴师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">催乳师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">小儿推拿师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">保健按摩师</a></dd>
+        <dd><a href="#" title="内容" target="_blank">产后康复师</a></dd>
+        <dt>加盟合作</dt>
+        <dd><a href="#" title="内容" target="_blank">加盟项目</a></dd>
+        <dd><a href="#" title="内容" target="_blank">加盟政策</a></dd>
+        <dd><a href="#" title="内容" target="_blank">总部支持</a></dd>
+        <dd><a href="#" title="内容" target="_blank">连锁分店</a></dd>
+        <dt>关于我们</dt>
+        <dd><a href="#" title="内容" target="_blank">公司介绍</a></dd>
+        <dd><a href="#" title="内容" target="_blank">公司文化</a></dd>
+        <dd><a href="#" title="内容" target="_blank">公司资质</a></dd>
+        <dd><a href="#" title="内容" target="_blank">联系我们</a></dd>
+        <dd><a href="#" title="内容" target="_blank">加入我们</a></dd>
+    </dl>
 </div>
 </body>
 </html>
