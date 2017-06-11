@@ -1,0 +1,230 @@
+/*导入基础less样式*/
+@import "basic";
+@charset "UTF-8";
+.divSwf{
+  width:1903px;
+  height:600px;
+  overflow: hidden;
+}
+.divMain{
+  width: 1200px;
+  margin:0 auto;
+  //background: #F8F8F8;
+}
+.kb{
+  margin:10px 0 20px 0;
+  border:1px solid @xysRed;
+  li{
+    width:299.5px;
+    height:100px;
+    float:left;
+    border-right:1px solid @xysRed;
+    img{
+      float:left;
+      margin:18px 18px 0 18px;
+    }
+    p:nth-child(2){
+      font-size: 18px;
+      color: @xysRed;
+      margin:26px 0 7px 0;
+    }
+  }
+  li:last-of-type{
+    border:none;
+  }
+}
+.blockTitleI{
+  width:115px;
+  height: 22px;
+  line-height: 22px;
+  margin:0 auto;
+  padding:0 0 0 10px;
+  font-size: 24px;
+  font-weight: normal;
+  border-left:4px solid @xysRed;
+}
+.blockTitleII{
+  width:100%;
+  height:33px;
+  position: relative;
+  border-bottom: 1px solid #BEBEBE;
+  h3{
+    width:105px;
+    text-align: center;
+    line-height: 1;
+    font-size: 24px;
+    font-weight: normal;
+    color: #494949;
+    padding:0 0 7px 0;
+    bottom:-1px;
+    position: absolute;
+    border-bottom: 2px solid #767474;
+  }
+  a{
+    color: #494949;
+    right:37px;
+    bottom:-9px;
+    font-size: 12px;
+    padding:0 4px;
+    position: absolute;
+    border:1px solid #BEBEBE;
+    background: #FFF;
+  }
+  a:hover{
+    color:@xysRed;
+  }
+}
+.blockTitleIII{
+  width:100%;
+  height:55px;
+  text-indent: 90px;
+  background:url("../slice/headPx.png") no-repeat #D7244E;
+  h3{
+    color: @xysGold;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 55px;
+    span{
+      font-size: 20px;
+      color: #FFF;
+      margin:0 0 0 15px;
+    }
+  }
+}
+.serList{
+  margin:20px 0 10px 0;
+  li{
+    width:598px;
+    height:398px;
+    float:left;
+    position: relative;
+    margin:0 4px 4px 0;
+    p:nth-child(1){
+      font-size: 22px;
+      line-height: 3;
+      text-align: center;
+    }
+    a{
+      width:145px;
+      height:50px;
+      bottom:20px;
+      left:50%;
+      margin-left:-72px;
+      color: #FFF;
+      font-size: 22px;
+      line-height: 50px;
+      text-align: center;
+      display: block;
+      position: absolute;
+      border:1px solid @xysRed;
+      border-radius: 25px;
+      background: @xysRed;
+    }
+  }
+  li:nth-child(1){
+    color: #0B4859;
+    background:url("../img/img01.png");
+  }
+  li:nth-child(2){
+    color: #626406;
+    margin:0 0 4px 0;
+    background:url("../img/img02.png");
+  }
+  li:nth-child(3){
+    color: #51504E;
+    background:url("../img/img03.png");
+  }
+  li:nth-child(4){
+    color: #653110;
+    margin:0 0 4px 0;
+    background:url("../img/img04.png");
+  }
+}
+.yxysList{
+  margin:15px 0;
+  li{
+    width:294.5px;
+    height:150px;
+    float:left;
+    margin:0 7px 7px 0;
+    color: #626060;
+    background:#F3F8FE;
+    img{
+      float:left;
+      margin:5px 15px 0 5px;
+    }
+    p:nth-child(2){
+      margin:25px 0 0 0;
+      font-size: 20px;
+      span{
+        font-size: 12px;
+        b{
+          color: @xysRed;
+          font-size: 20px;
+          margin:0 3px;
+        }
+      }
+    }
+    p:nth-child(3){
+      margin:10px 0 0 0;
+      font-size: 16px;
+      line-height: 1.7;
+      span{
+        color: #494949;
+      }
+    }
+  }
+  li:nth-child(4),li:nth-child(8){
+    margin:0 0 7px 0;
+  }
+}
+.pxBlock{
+  width:1300px;
+  //margin:0 0 0 3px;
+  overflow: hidden;
+  li{
+    float: left;
+    margin:12px 12px 12px 0;
+    div{
+      width:163px;
+      height:163px;
+      float: left;
+      text-align: center;
+      a{
+        color: #FFF;
+      }
+      h4{
+        margin:52px 0 0 0;
+        font-size: 24px;
+      }
+      h5{
+        margin:5px 0 0 0;
+        font-size: 16px;
+        font-weight: normal;
+      }
+    }
+    img{
+      float:left;
+    }
+  }
+  li:nth-child(1) div{
+    background: #F24770;
+  }
+  li:nth-child(2) div{
+    background: #FF8123;
+  }
+  li:nth-child(3) div{
+    background: #CBC11E;
+  }
+  li:nth-child(4) div{
+    background: #A0CF20;
+  }
+  li:nth-child(5) div{
+    background: #1D7EC9;
+  }
+  li:nth-child(6) div{
+    margin:0;
+    background: #921DC9;
+  }
+}
+
