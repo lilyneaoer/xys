@@ -10,8 +10,9 @@
 <meta name="apple-mobile-web-app-capable" content="no" />
 <meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" type="text/css" href="../css/style-main.css" />
-<script src="../js/jquery1121.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-swf.css" />
 </head>
 <body>
 
@@ -32,8 +33,8 @@
                 昆明市张**女士 11：00 成功预约月嫂李四
             </div>
             <div class="user">
-                <a href="#">登录</a>&nbsp;|&nbsp;
-                <a href="#">注册</a>
+                <a href="#" id="userLoginBtn">登录</a>&nbsp;|&nbsp;
+                <a href="#" id="userRegBtn">注册</a>
             </div>
             <div class="clear"></div>
         </div>
@@ -69,27 +70,107 @@
     </div>
 </div>
 <div class="divSwf">
-    <img src="../img/swf01.png">
+    <!--轮播s-->
+    <div id="roll_Box" class="rollBox">
+        <!--播放内容-->
+        <div id="tab_Auto_Play" class="tabAutoPlay"></div>
+        <!--左右按钮-->
+        <ul id="tab_Auto_Btn" class="tabBtn">
+            <!--点点点-->
+            <!--用下面的json生成按钮-->
+        </ul>
+        <ul class="tab_content" id="tab_content">
+            <!--用下面的json生成广告-->
+        </ul>
+    </div>
+    <script src="../js/jquery-powerSwitch.min.js"></script>
+    <script>
+        var adData = [{
+            id: 1,
+            src: "../img/swf01.png",
+            title: "title1",
+            link: "#"
+        }, {
+            id: 2,
+            src: "../img/swf02.png",
+            title: "title2",
+            link: "#"
+        }, {
+            id: 3,
+            src: "../img/swf01.png",
+            title: "title1",
+            link: "#"
+        }];
+    </script>
+    <script>
+        //根据json生成广告
+        var htmlAd = "", htmlBtn = "";
+        $.each(adData, function (index, obj) {
+            if (index == 0) {
+                htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid'><a href='" + obj.link + "' target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
+                htmlBtn = htmlBtn + "<li class='tabs'><a href='"+obj.link+"' class='tab_a tab_on' data-rel='tabAutoPlay" + obj.id + "'>" + obj.id + "</a></li>";
+            }
+            else {
+                htmlAd = htmlAd + "<li id='tabAutoPlay" + obj.id + "' class='tabAutoPlayChid' style='display: none;'><a href='" + obj.link + "'target='_blank'><img title='" + obj.title + "'src='" + obj.src + "'></a></li>";
+                htmlBtn = htmlBtn + "<li class='tabs'><a href='"+obj.link+"' class='tab_a' data-rel='tabAutoPlay" + obj.id + "'>" + obj.id + "</a></li>";
+            }
+        });
+        $("#tab_content").html(htmlAd);
+        $("#tab_Auto_Btn").html(htmlBtn);
+        // 绑定
+        $("#tab_Auto_Btn a").powerSwitch({
+            classAdd: "tab_on",
+            animation: "translate",
+            duration:500,
+            eventType: "mouseover",
+            autoTime: 4500,
+            hoverStop: true,
+            container: $("#tab_Auto_Play")
+        });
+        //设置点点点及按钮水平居中
+        $("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
+        $("#tab_Auto_Play").css("width",$(".divSwf").width()-17)
+        $("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
+        var pageWidth=document.body.clientWidth;
+        $("#roll_Box").css("margin-left",-pageWidth/2);
+        //alert(pageWidth);
+        //控制按钮渐入渐出
+        $("#roll_Box").hover(
+                function () {
+                    $("#tab_Auto_Play a").css("opacity", "0.6");
+                },
+                function () {
+                    $("#tab_Auto_Play a").css("opacity", "0");
+                });
+        $("#tab_Auto_Play a").hover(
+                function () {
+                    $(this).css("opacity", "1");
+                },
+                function () {
+                    $(this).css("opacity", "0.6");
+                });
+    </script>
+    <!--轮播e-->
 </div>
 <div class="mid1200">
     <ul class="kb">
         <li>
-            <img src="../slice/iconKB1.png" alt="内容">
+            <img src="../slice/icon-KB1.png" alt="内容">
             <p>金牌服务-安心</p>
             <p>严选优质月嫂</p>
         </li>
         <li>
-            <img src="../slice/iconKB2.png" alt="内容">
+            <img src="../slice/icon-KB2.png" alt="内容">
             <p>专业 - 贴心</p>
             <p>专业服务，值得信赖</p>
         </li>
         <li>
-            <img src="../slice/iconKB3.png" alt="内容">
+            <img src="../slice/icon-KB3.png" alt="内容">
             <p>标准化－省心</p>
             <p>公司统一标准收费</p>
         </li>
         <li>
-            <img src="../slice/iconKB4.png" alt="内容">
+            <img src="../slice/icon-KB4.png" alt="内容">
             <p>严格培训－舒心</p>
             <p>120+课时培训，情景式培训</p>
         </li><div class="clear"></div>
@@ -437,5 +518,40 @@
         云南星月嫂之家家政服务有限公司
     </p>
 </div>
+<!--用户注册登陆框-->
+<div class="userBg" id="userBg">
+    <div class="userBox" id="userReg">
+        <h3>用户注册<a class="userCls"  href="#" title="关闭"><img src="../slice/icon_cls.png"></a> </h3>
+        <div class="inputBox uId"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_g.png"></div>
+        <div class="inputBox uPwd"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_x.png"></div>
+        <div class="inputBox uPhone"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_g.png"></div>
+        <div class="inputBox uCode"><input class="uInput" value="请输入注册帐号"><input type="button" value="获取验证码" class="getCode"></div>
+        <div class="inputBox"> <input type="button" class="subBtn" value="提&nbsp;&nbsp;交"></div>
+        <div class="errInfo">手机号码输入错误</div>
+    </div>
+    <div class="userBox" id="userLogin">
+        <h3>用户登陆<a class="userCls"  href="#" title="关闭"><img src="../slice/icon_cls.png"></a></h3>
+        <div class="inputBox uId"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_g.png"></div>
+        <div class="inputBox uPwd"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_x.png"></div>
+        <div class="inputBox uCode"><input class="uInput" value="请输入注册帐号"><input type="button" value="获取验证码" class="getCode"></div>
+        <div class="inputBox"> <input type="button" class="subBtn" value="提&nbsp;&nbsp;交"></div>
+        <div class="errInfo">手机号码输入错误</div>
+    </div>
+</div>
+<script>
+    $("#userLoginBtn").click(function(){
+        $("#userBg,#userLogin").fadeIn();
+
+    });
+    $("#userRegBtn").click(function(){
+        $("#userBg,#userReg").fadeIn();
+    });
+    $(".userCls").click(function(){
+        $("#userBg,#userLogin,#userReg").fadeOut();
+    });
+    $("#userBg").click(function(){
+        //$("#userBg,#userLogin,#userReg").fadeOut();
+    });
+</script>
 </body>
 </html>

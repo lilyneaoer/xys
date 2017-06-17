@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户后台-我的服务</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-listPage.css" />
+</head>
+<body>
+<% include siteTop.html %>
+<div class="breadNav">
+    <div class="mid1200"><span>当前位置</span>:<span>首页</span>><span>用户中心</span>><span>我的预约</span></div>
+</div>
+<div class="divMain">
+    <div class="leftBar">
+        <h3>用户中心</h3>
+        <ul>
+            <li class="act"><a href="#" title="内容">我的预约</a></li>
+            <li><a href="#" title="内容">我的服务</a></li>
+            <li><a href="#" title="内容">我的评价</a></li>
+        </ul>
+    </div>
+    <div class="rightContent">
+        <ul class="ysList">
+            <%for(i=0;i<5;i++){%>
+            <li>
+                <img src="../img/face198_198.png" alt="昆明月嫂张阿姨">
+                <div class="ysInfo">
+                <p>
+                    <a href="#" title="昆明月嫂张阿姨">张阿姨</a>
+                    ￥<b>6666</b>元月<span>实名验证</span>
+                    <span>健康证</span>
+                    <span>母婴护理证</span>
+                    <span>认证催乳师</span>
+                </p>
+                <p>
+                    服务经验：<b>5</b>年<b>66</b>户
+                    <span>云南昆明</span>
+                    <span>35岁</span>
+                    <span>汉族</span>
+                    <span>高中</span>
+                    <span>属虎</span>
+                </p>
+                <p>
+                    <span>形像谈吐好</span>
+                    <span>经验丰富</span>
+                    <span>月子餐做得好</span>
+                    <span>热情直爽</span>
+                    <span>形像谈吐好</span>
+                    <span>经验丰富</span>
+                    <span>月子餐做得好</span>
+                    <span>热情直爽</span><div class="clear"></div>
+                </p>
+                <p>
+                    服务日期：<b>2017-06-06</b>至<b>2017-06-06</b>&nbsp;&nbsp;服务时长:<b>60</b>天
+                </p>
+                </div><div class="clear"></div>
+                <div class="btnsWrap">
+                    <a href="#" title="已回电" class="btns">发表评价</a>
+                    <a href="#" title="已回电" class="btns">查看详情</a>
+                </div>
+
+            </li>
+            <%}%>
+        </ul>
+    </div><div class="clear"></div>
+</div>
+<% include siteBtm.html %>
+</body>
+</html>

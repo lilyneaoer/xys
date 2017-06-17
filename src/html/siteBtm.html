@@ -66,3 +66,38 @@
         云南星月嫂之家家政服务有限公司
     </p>
 </div>
+<!--用户注册登陆框-->
+<div class="userBg" id="userBg">
+    <div class="userBox" id="userReg">
+        <h3>用户注册<a class="userCls"  href="#" title="关闭"><img src="../slice/icon_cls.png"></a> </h3>
+        <div class="inputBox uId"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_g.png"></div>
+        <div class="inputBox uPwd"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_x.png"></div>
+        <div class="inputBox uPhone"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_g.png"></div>
+        <div class="inputBox uCode"><input class="uInput" value="请输入注册帐号"><input type="button" value="获取验证码" class="getCode"></div>
+        <div class="inputBox"> <input type="button" class="subBtn" value="提&nbsp;&nbsp;交"></div>
+        <div class="errInfo">手机号码输入错误</div>
+    </div>
+    <div class="userBox" id="userLogin">
+        <h3>用户登陆<a class="userCls"  href="#" title="关闭"><img src="../slice/icon_cls.png"></a></h3>
+        <div class="inputBox uId"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_g.png"></div>
+        <div class="inputBox uPwd"><input class="uInput" value="请输入注册帐号"><img src="../slice/icon_x.png"></div>
+        <div class="inputBox uCode"><input class="uInput" value="请输入注册帐号"><input type="button" value="获取验证码" class="getCode"></div>
+        <div class="inputBox"> <input type="button" class="subBtn" value="提&nbsp;&nbsp;交"></div>
+        <div class="errInfo">手机号码输入错误</div>
+    </div>
+</div>
+<script>
+    $("#userLoginBtn").click(function(){
+        $("#userBg,#userLogin").fadeIn();
+
+    });
+    $("#userRegBtn").click(function(){
+        $("#userBg,#userReg").fadeIn();
+    });
+    $(".userCls").click(function(){
+        $("#userBg,#userLogin,#userReg").fadeOut();
+    });
+    $("#userBg").click(function(){
+        //$("#userBg,#userLogin,#userReg").fadeOut();
+    });
+</script>

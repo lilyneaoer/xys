@@ -128,6 +128,26 @@
     }
   }
 }
+.breadNav{
+  width:100%;
+  height:36px;
+  margin:0 0 10px 0;
+  color: #909091;
+  line-height: 36px;
+  background: #F3F8FE;
+  div{
+    padding:0 0 0 20px;
+    background:url("../slice/breadIcon.png") no-repeat 0 center;
+    span{
+      margin:0 3px;
+    }
+  }
+}
+.divMain{
+  width: 1200px;
+  margin:0 auto;
+  //background: #F8F8F8;
+}
 /*底部*/
 .siteBtm{
   width:100%;
@@ -204,5 +224,116 @@ dl.btmArc{
   p{
     text-align: center;
     line-height: 1.5;
+  }
+}
+.userBg{
+  width:100%;
+  height:100%;
+  top:0;
+  display: none;
+  position: absolute;
+  background:rgba(0,0,0,0.3);
+}
+.userBox{
+  width:355px;
+  //height:347px;
+  margin:0 auto;
+  top:50%;
+  display: none;
+  margin-top: -173px;
+  position: relative;
+  background: #FFF;
+  z-index: 9999;
+  h3{
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    padding:8px 0;
+    margin:0 0 30px 0;
+    color: #FFF;
+    background:url("../img/loginLogo.png") no-repeat 8px center @xysRed;
+    img{
+      float:right;
+      margin:0 10px 0 0;
+    }
+  }
+  .inputBox{
+    padding:0 0 0 40px;
+    margin:20px 0 0 30px;
+    height: 31px;
+    .uInput{
+      width: 155px;
+      float: left;
+      margin:4px 0 0 0;
+      padding:0 0 3px 0;
+      font-size: 16px;
+      text-align: center;
+      color: #A8A7A7;
+      border-bottom:1px solid #656565;
+    }
+    a{
+      float:left;
+      display: block;
+      width: 20px;
+      height:20px;
+      margin:5px 0 0 10px;
+    }
+    .getCode{
+      margin:0 0 0 15px;
+      padding:5px;
+      color: #FFF;
+      font-size: 14px;
+      background:@xysRed;
+      border-radius: 5px;
+    }
+  }
+  .uId{
+    background: url("../slice/uId.png") no-repeat;
+  }
+  .uPwd{
+    background: url("../slice/uPwd.png") no-repeat;
+  }
+  .uPhone{
+    background: url("../slice/uPhone.png") no-repeat 5px center;
+  }
+  .uCode{
+    background: url("../slice/uCode.png") no-repeat;
+  }
+  .subBtn{
+    margin:0 0 0 35px;
+    padding: 5px 20px;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    background: @xysRed;
+    border-radius: 5px;
+  }
+  .errInfo{
+    color: @xysRed;
+    padding:10px;
+  }
+}
+.pageBar{
+  text-align: center;
+  li{
+    float:left;
+    padding:0 5px;
+    height:25px;
+    border:1px solid #BFBFBF;
+    margin:0 5px 0 0;
+  }
+  .num{
+    width:25px;
+    height:25px;
+    padding:0;
+    text-align: center;
+    line-height: 25px;
+    margin:0 5px 0 0;
+  }
+  .num:nth-child(5){
+    background: @xysRed;
+    a{
+      color: #FFF;
+    }
   }
 }
