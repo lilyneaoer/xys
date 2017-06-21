@@ -1,0 +1,332 @@
+/*导入基础less样式*/
+@import "basic";
+@charset "UTF-8";
+.leftConent{
+  float:left;
+  width:900px;
+}
+.rightBarYs{
+  float:right;
+  width:290px;
+}
+.ysList{
+  margin:15px 0;
+  li{
+    color: #767676;
+    font-size: 16px;
+    position: relative;
+    img{
+      width:200px;
+      height:270px;
+      float:left;
+      margin:0 10px 0 0;
+      border:1px solid #DDDDDD;
+    }
+    .ysInfo{
+      float:left;
+      margin:15px 0 10px 20px;
+      p{
+        margin:0 0 8px 0;
+        b{
+          font-size: 18px;
+          color: #E55C5C;
+        }
+      }
+      p:nth-child(1){
+        a{
+          font-size: 22px;
+          color: #494949;
+          margin:0 5px 0 0;
+        }
+        a:hover{
+          color:@xysRed;
+        }
+        b{
+          font-size: 22px;
+          margin:0 2px;
+        }
+        span {
+          height: 26px;
+          line-height: 26px;
+          margin:0 0 0 10px;
+          color: #FFF;
+          font-style: normal;
+          padding:0 7px 0 23px;
+          background: url(../slice/redTips.png) 0 center no-repeat #DA4141;
+        }
+      }
+      p:nth-child(2){
+        span{
+          margin:0 5px 0 0;
+        }
+      }
+      p:nth-child(3){
+        width:650px;
+        height:65px;
+        margin:12px 0 5px 0;
+        span{
+          float:left;
+          margin:0 5px 5px 0;
+          padding:5px;
+          border:1px solid #D2D2D2;
+          border-radius: 3px;
+          background: #FFF;
+        }
+      }
+      p:nth-child(5){
+        margin:0;
+
+      }
+      p:nth-child(6){
+        background: #F6F2F1;
+        line-height: 1.5;
+        padding:5px 10px;
+        b{
+          font-size: 16px;
+        }
+        b:nth-child(1){
+          font-size: 22px;
+        }
+      }
+    }
+    .btnsWrap{
+      left:350px;
+      bottom:0px;
+      position: absolute;
+      .btns{
+        width:150px;
+        height:40px;
+        float:left;
+        font-size: 16px;
+        display: block;
+        margin:20px 55px 0 0;
+        color: #FFF;
+        text-align: center;
+        line-height: 40px;
+        border:1px solid #D11D48;
+        background:@xysRed;
+        border-radius: 3px;
+      }
+      .btns:hover{
+        background: #DA4141;
+      }
+    }
+  }
+}
+.pageMenu{
+  margin:50px 0 20px 0;
+  background: #F6F2F1;
+  li{
+    font-size: 18px;
+    height:38px;
+    margin:0 10px 0 0;
+    padding:0 5px;
+    line-height: 38px;
+    float:left;
+    a{
+      color: #494949;
+    }
+    a:hover{
+      color: @xysRed;
+    }
+  }
+  .selOn{
+    border-bottom:2px solid @xysRed;
+    a{
+      color: @xysRed;
+    }
+  }
+  li:nth-child(6){
+    float:right;
+    margin:0;
+    padding:0 10px;
+    background: @xysRed;
+    a{
+      color: #FFF;
+    }
+  }
+}
+.ysTitle{
+  margin:10px 0;
+  padding:0 0 3px 25px;
+  font-size: 20px;
+  border-bottom:1px solid #E1DDDE;
+  background: url(../slice/iconJbzl.png) no-repeat;
+}
+.ysJbzl{
+  p{
+    padding:0 10px;
+    font-size: 16px;
+    color: #494949;
+    line-height: 2;
+    span{
+      width:400px;
+      display: block;
+      float:left;
+      b{
+        margin:0 10px 0 0;
+        color:#9F9F9F;
+      }
+    }
+  }
+  p:nth-child(3){
+    text-indent: 2em;
+    line-height: 1.5;
+  }
+}
+.ysImgs{
+  .ysTitle{
+    background: url(../slice/iconImg.png) no-repeat 0 center;
+  }
+  img{
+    float:left;
+    margin:0 10px;
+  }
+}
+.ysZwjn{
+  .ysTitle{
+    background: url(../slice/iconJn.png) no-repeat 0 3px;
+  }
+  .box{
+    width:874px;
+    height:200px;
+    margin:0 0 10px 10px;
+    position: relative;
+    border:1px solid #E1DFDF;
+    img{
+      float:left;
+      border-right:1px solid #E1DFDF;
+    }
+    h4{
+      width:222px;
+      height:28px;
+      line-height: 28px;
+      color: #FFF;
+      font-size: 20px;
+      text-align: center;
+      position: absolute;
+      bottom:0;
+      background: #DF5381;
+    }
+    ul{
+      width:622px;
+      float:left;
+      margin:15px 0 0 20px;
+      li{
+        float:left;
+        padding:0 0 0 30px;
+        width:150px;
+        margin:0 0 8px 0;
+        font-size: 16px;
+        color: #494949;
+        background: url(../slice/heartGray.png) no-repeat 0 center;
+      }
+      li.heart{
+        background: url(../slice/heartRed.png) no-repeat 0 center;
+      }
+      li:hover{
+        pointer:cursor;
+        color: @xysRed;
+      }
+    }
+  }
+}
+.ysGzpq{
+  .ysTitle{
+    background: url(../slice/iconPq.png) no-repeat 0 3px;
+  }
+}
+
+.ysYhpl{
+  .ysTitle{
+    background: url(../slice/iconPj.png) no-repeat 0 center;
+  }
+  .guestList{
+    li{
+      font-size: 16px;
+      background: #F1F1F1;
+      margin:0 0 10px 0;
+      h4{
+        padding:5px;
+        color: #FFF;
+        background:@xysRed;
+      }
+      p:nth-child(2){
+        line-height: 1.5;
+        padding:10px;
+        text-indent: 2em;
+        span{
+          font-size: 26px;
+          color: #6F6A6A;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.ysPqb{
+  width:290px;
+  height:290px;
+  border:1px solid #494949;
+}
+.rBox{
+  margin:10px 0 0 0;
+  border:1px solid #E1DFDF;
+  h3{
+    padding:5px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #494949;
+    background: #F6F4F3;
+  }
+}
+.rFwlc{
+ h3{
+   background:url("../slice/iconFwlc.png") no-repeat 80px center #F6F4F3;
+ }
+  img{
+    margin:20px auto;
+  }
+}
+.rYebd{
+  h3{
+    background:url("../slice/iconYebd.png") no-repeat 80px center #F6F4F3;
+  }
+  ul{
+    margin:10px;
+    li{
+      margin:0 0 5px 0;
+      padding:0 0 0 18px;
+      background: url("../slice/iconSizhi.png") no-repeat 0 5px;
+    }
+  }
+}
+.rYxys{
+  h3{
+    background:url("../slice/iconYxys.png") no-repeat 80px center #F6F4F3;
+  }
+  ul{
+    li{
+      position: relative;
+      img{
+        width:266px;
+        height:266px;
+        margin:10px auto;
+      }
+      p{
+        width:266px;
+        height:30px;
+        line-height: 30px;
+        position: absolute;
+        bottom:0;
+        margin:10px 10px 0 10px;
+        font-size: 16px;
+        color:#FFF;
+        background: rgba(0,0,0,0.3);
+        span{
+          margin:0 0 0 25px;
+        }
+      }
+    }
+  }
+}

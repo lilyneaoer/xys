@@ -1,0 +1,232 @@
+/*导入基础less样式*/
+@import "basic";
+@charset "UTF-8";
+.filter{
+  width:100%;
+  padding:15px 0 0 0;
+  border:1px solid #DCDCDC;
+  dl{
+    font-size: 18px;
+    margin:0 0 15px 20px;
+    dt{
+      float:left;
+      color: #858585;
+      padding:0 0 0 30px;
+    }
+    dd{
+      float:left;
+      padding:0 5px;
+      margin:0 0 0 10px;
+      a{
+        color:#494949;
+      }
+      a:hover{
+        color:@xysRed;
+      }
+    }
+    dd.sel{
+      background: @xysRed;
+      a{
+        color:#FFF;
+      }
+    }
+  }
+  dl:nth-child(1){
+    dt{
+      background: url(../slice/iconPrice.png) no-repeat 0 center;
+    }
+  }
+  dl:nth-child(2){
+    dt{
+      background: url(../slice/iconJy.png) no-repeat 0 center;
+    }
+  }
+  dl:nth-child(3){
+    dt{
+      background: url(../slice/iconYears.png) no-repeat 0 center;
+    }
+  }dl:nth-child(4){
+     dt{
+       background: url(../slice/iconJG.png) no-repeat 0 center;
+     }
+   }
+
+}
+.screen{
+  margin:15px 0 15px 0;
+  color:#494949;
+  font-size: 14px;
+  a{
+    margin:0 0 0 15px;
+    padding:1px 20px 1px 3px;
+    border:1px solid #BDBABA;
+    background:url(../slice/iconXGRay.png) right center no-repeat #EAE8E8;
+  }
+  a:hover{
+    color: #FFF;
+    border:1px solid #D11D48;
+    background:url(../slice/iconXRed.png) right center no-repeat #D11D48;
+  }
+}
+.listBar{
+  width:100%;
+  height:35px;
+  line-height: 35px;
+  margin:0 0 15px 0;
+  background: #F1F1F1;
+  span{
+    float:right;
+    color: #7D7A7A;
+    margin:0 25px 0 0;
+    b{
+      color:@xysRed;
+    }
+  }
+  a{
+    float:left;
+    margin:0 10px 0 0;
+    font-size: 14px;
+    padding:0 20px 0 15px;
+    border:1px solid #F1F1F1;
+  }
+  a:hover{
+    //background:#FFF;
+    border:1px solid @xysRed;
+  }
+  .arrow{
+    background: url("../slice/arrowGray.png") no-repeat;
+  }
+  .arrow:hover{
+    background:url("../slice/arrowRed.png") no-repeat #FFF;
+  }
+  .selcted{
+    color: #FFF;
+    background:url("../slice/arrowWhite.png") no-repeat @xysRed;
+  }
+  .selcted:hover{
+    color: #FFF;
+    background:url("../slice/arrowWhite.png") no-repeat @xysRed;
+  }
+  .dbarrow{
+    background: url("../slice/dbArrow3.png") no-repeat;
+  }
+  .dbarrow:hover{
+    border:1px solid @xysRed;
+    background: url("../slice/dbArrow3.png") no-repeat #FFF;
+  }
+  .selcted2{
+    color: #FFF;
+    border:1px solid @xysRed;
+    background: url("../slice/dbArrow1.png") no-repeat @xysRed;
+  }
+  .selcted2:hover{
+    color: #FFF;
+    border:1px solid @xysRed;
+    background: url("../slice/dbArrow1.png") no-repeat @xysRed;
+  }
+}
+.ysList{
+  margin:10px 0 15px 0;
+  li{
+    height:214px;
+    margin:0 0 10px 0;
+    color: #767676;
+    font-size: 16px;
+    position: relative;
+    background: #F7F5F5;
+    border:1px solid #F7F5F5;
+    img{
+      width:198px;
+      height:198px;
+      float:left;
+      margin:7px;
+      border:1px solid #DDDDDD;
+    }
+    .ysInfo{
+      float:left;
+      margin:15px 0 10px 20px;
+      p{
+        margin:0 0 8px 0;
+        b{
+          font-size: 18px;
+          color: #E55C5C;
+        }
+      }
+      p:nth-child(1){
+        a{
+          font-size: 22px;
+          color: #494949;
+          margin:0 5px 0 0;
+        }
+        a:hover{
+          color:@xysRed;
+        }
+        b{
+          font-size: 22px;
+          margin:0 2px;
+        }
+        span {
+          height: 26px;
+          line-height: 26px;
+          margin:0 0 0 10px;
+          color: #FFF;
+          font-style: normal;
+          padding:0 7px 0 23px;
+          background: url(../slice/redTips.png) 0 center no-repeat #DA4141;
+        }
+      }
+      p:nth-child(2){
+        span{
+          margin:0 5px 0 0;
+        }
+      }
+      p:nth-child(3){
+        width:330px;
+        height:100px;
+        margin:12px 0 5px 0;
+        span{
+          float:left;
+          margin:0 5px 5px 0;
+          padding:5px;
+          border:1px solid #D2D2D2;
+          border-radius: 3px;
+          background: #FFF;
+        }
+      }
+      p:nth-child(5){
+        margin:0;
+      }
+      p:nth-child(6){
+        b{
+          font-size: 16px;
+        }
+      }
+    }
+    .btnsWrap{
+      right:20px;
+      top:50%;
+      margin-top: -60px;
+      position: absolute;
+      .btns{
+        width:150px;
+        height:40px;
+        font-size: 16px;
+        display: block;
+        margin:20px 0 0 0;
+        color: #FFF;
+        text-align: center;
+        line-height: 40px;
+        border:1px solid #D11D48;
+        background:@xysRed;
+        border-radius: 3px;
+      }
+      .btns:hover{
+        background: #DA4141;
+      }
+    }
+  }
+  li:hover{
+    border:1px solid @xysRed;
+    box-shadow:0 0 10px rgba(209,29, 72, .5);
+  }
+}

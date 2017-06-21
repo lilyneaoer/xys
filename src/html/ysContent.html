@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>月嫂详情</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-ysContent.css" />
+</head>
+<body>
+<% include siteTop.html %>
+<div class="breadNav">
+    <div class="mid1200"><span>当前位置</span>:<span>首页</span>><span>用户中心</span>><span>我的预约</span></div>
+</div>
+<div class="divMain">
+    <div class="leftConent">
+        <ul class="ysList">
+            <li>
+                <img src="../img/ysImg33.png" alt="昆明月嫂张阿姨">
+                <div class="ysInfo">
+                    <p>
+                        <a href="#" title="昆明月嫂张阿姨">张阿姨</a>
+                        <span>实名验证</span>
+                        <span>健康证</span>
+                        <span>母婴护理证</span>
+                        <span>认证催乳师</span>
+                    </p>
+                    <p>
+                        服务经验：<b>5</b>年<b>66</b>户
+                        <span>云南昆明</span>
+                        <span>35岁</span>
+                        <span>汉族</span>
+                        <span>高中</span>
+                        <span>属虎</span>
+                    </p>
+                    <p>
+                        <span>形像谈吐好</span>
+                        <span>经验丰富</span>
+                        <span>月子餐做得好</span>
+                        <span>热情直爽</span>
+                        <span>形像谈吐好</span>
+                        <span>经验丰富</span>
+                        <span>月子餐做得好</span>
+                        <span>热情直爽</span><div class="clear"></div>
+                    </p>
+                    <p>
+                        ￥<b>6666</b>元月<br>
+                        &nbsp;<b>6</b>&nbsp;人预约&nbsp;&nbsp;&nbsp;&nbsp;<b>6</b>&nbsp;条评价&nbsp;&nbsp;&nbsp;&nbsp;<b>6</b>&nbsp;人浏览
+                    </p>
+                </div><div class="clear"></div>
+                <div class="btnsWrap">
+                    <a href="#" title="已回电" class="btns">立即预约</a>
+                    <a href="#" title="已回电" class="btns">加入收藏</a>
+                </div>
+
+            </li>
+            <div class="clear"></div>
+        </ul>
+        <ul class="pageMenu">
+            <li class="selOn menu"> <a href="javascript:;">基本资料</a></li>
+            <li class="menu"> <a href="javascript:;">月嫂照片</a></li>
+            <li class="menu"> <a href="javascript:;">月嫂技能</a></li>
+            <li class="menu"> <a href="javascript:;">工作排期表</a></li>
+            <li class="menu"> <a href="javascript:;">用户评论</a></li>
+            <li> <a href="javascript:;">立即预约</a></li>
+            <div class="clear"></div>
+        </ul>
+        <script>
+            $(".pageMenu .menu").click(function(){
+                $(this).siblings().removeClass("selOn");
+                $(this).addClass("selOn");
+            });
+        </script>
+        <div class="ysJbzl">
+            <h3 class="ysTitle">基本资料</h3>
+            <p>
+                <span><b>身份证号:</b>53293019800101****</span><span><b>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历:</b>高中</span><br>
+                <span><b>服务类别:</b>月嫂</span><span><b>籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯:</b>云南昆明</span><br>
+                <span><b>服务城市:</b>昆明</span><span><b>民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族:</b>汉族</span><br>
+                <span><b>现&nbsp;居&nbsp;&nbsp;地:</b>云南昆明</span><span><b>婚育状态:</b>已婚</span><br>
+                <span><b>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄:</b>49岁</span><span><b>服务经验:</b>50户/3年</span><br>
+                <span><b>属&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相:</b>猴</span><span><b>星&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;座:</b>白羊座</span><br>
+                <span><b>综合评价:</b></span>
+            </p><div class="clear"></div>
+            <p>
+                促进血液循环，活跃新陈代谢，使细胞的吞噬机能加强，起到平衡人体机能，以达到补气血，疏风寒，通络下乳，彻底排毒，燃烧脂肪，美化肌肤，舒缓压力，增强免疫力的作用。
+            </p>
+        </div>
+        <div class="ysImgs">
+            <h3 class="ysTitle">月嫂照片</h3>
+            <%- img(200,200,'ysImg') %>
+            <%- img(200,200,'ysImg') %>
+            <%- img(200,200,'ysImg') %>
+            <%- img(200,200,'ysImg') %><div class="clear"></div>
+        </div>
+        <div class="ysZwjn">
+            <h3 class="ysTitle">掌握技能</h3>
+            <div class="box">
+                <img src="../img/ysimg1.png" alt="掌握技能" title="掌握技能">
+                <h4>产妇护理</h4>
+                <ul>
+                    <li class="heart">生活护理</li>
+                    <%for(i=0;i<20;i++){%>
+                       <li>生活护理</li>
+                    <%}%><div class="clear"></div>
+                </ul><div class="clear"></div>
+            </div>
+            <div class="box">
+                <img src="../img/ysimg2.png" alt="掌握技能" title="掌握技能">
+                <h4>宝宝护理</h4>
+                <ul>
+                    <li class="heart">生活护理</li>
+                    <%for(i=0;i<20;i++){%>
+                    <li>生活护理</li>
+                    <%}%><div class="clear"></div>
+                </ul><div class="clear"></div>
+            </div>
+            <div class="box">
+                <img src="../img/ysimg3.png" alt="掌握技能" title="掌握技能">
+                <h4>宝宝早教</h4>
+                <ul>
+                    <li class="heart">生活护理</li>
+                    <%for(i=0;i<20;i++){%>
+                    <li>生活护理</li>
+                    <%}%><div class="clear"></div>
+                </ul><div class="clear"></div>
+            </div>
+            <div class="box">
+                <img src="../img/ysimg4.png" alt="掌握技能" title="掌握技能">
+                <h4>产妇哺乳</h4>
+                <ul>
+                    <li class="heart">生活护理</li>
+                    <%for(i=0;i<20;i++){%>
+                    <li>生活护理</li>
+                    <%}%><div class="clear"></div>
+                </ul><div class="clear"></div>
+            </div>
+        </div>
+        <div class="ysGzpq">
+            <h3 class="ysTitle">工作排期表</h3>
+            <%- img(740,400) %>
+        </div>
+        <div class="ysYhpl">
+            <h3 class="ysTitle">用户评论</h3>
+            <ul class="guestList">
+                <%for(i=0;i<4;i++){%>
+                <li>
+                    <h4>发表日期 : 2017-06-01</h4>
+                    <p>      <span>“</span>感谢月嫂杨姐对我和宝宝一个月来的细心照顾，杨姐很专业，经验丰富，好多宝宝的问题都遇到过，杨姐帮宝宝调整了好的作息习惯，在没有月嫂的日子里我一个人带也省力很多，对于新妈妈在月子期间的饮食更是搭配的合理又美味，做得一手好菜，真不舍得杨姐走啊，开奶水平也很棒，在一开始宝宝住院半个月没能吸到母乳的情况下实现了全母乳喂养，宝宝体重也从出生的7斤3两满月时已达9斤半，衷心的说声杨姐很棒值得推荐。<span>”</span></p>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+    <div class="rightBarYs">
+       <div class="ysPqb">
+           排期表
+       </div>
+        <div class="rBox rFwlc">
+            <h3>
+                服务流程
+            </h3>
+            <img src="../img/liucheng.png" alt="服务流程">
+        </div>
+        <div class="rBox rYebd">
+            <h3>育儿宝典</h3>
+            <ul>
+                <%for(i=1;i<11;i++){%>
+                <li><a href="#" title="小儿感冒症状与防治">小儿感冒症状与防治</a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="rBox rYxys">
+            <h3>严选月嫂</h3>
+            <ul>
+                <%for(i=1;i<8;i++){%>
+                <li>
+                    <a href="#" title="张阿姨" target="_blank">
+                        <img src="../img/ysImg22.png" alt="张阿姨" title="张阿姨">
+                    </a>
+                    <p>
+                        <span>张阿姨</span>
+                        <span>35岁</span>
+                        <span>￥6666/月</span>
+                    </p>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div><div class="clear"></div>
+</div>
+<% include siteBtm.html %>
+</body>
+</html>

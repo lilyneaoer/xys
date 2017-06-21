@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>月嫂列表</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-ysList.css" />
+</head>
+<body>
+<% include siteTop.html %>
+<div class="breadNav">
+    <div class="mid1200"><span>当前位置</span>:<span>首页</span>><span>用户中心</span>><span>我的预约</span></div>
+</div>
+<div class="divMain">
+<div class="filter">
+    <dl class="price">
+        <dt>价格</dt>
+        <dd class="sel"><a href="#">不限</a></dd>
+        <dd><a href="#">1000</a></dd>
+        <dd><a href="#">2000</a></dd>
+        <dd><a href="#">3000</a></dd>
+        <dd><a href="#">4000</a></dd>
+        <dd><a href="#">5000以上</a></dd><div class="clear"></div>
+    </dl>
+    <dl class="exp">
+        <dt>经验</dt>
+        <dd class="sel"><a href="javascrit:;">不限</a></dd>
+        <dd><a href="javascrit:;">1年以内</a></dd>
+        <dd><a href="javascrit:;">2~3年</a></dd>
+        <dd><a href="javascrit:;">3~4年</a></dd>
+        <dd><a href="javascrit:;">4~5年</a></dd>
+        <dd><a href="javascrit:;">5~6年</a></dd><div class="clear"></div>
+    </dl>
+    <dl class="older">
+        <dt>年龄</dt>
+        <dd class="sel"><a href="javascrit:;">不限</a></dd>
+        <dd><a href="javascrit:;">30岁以下</a></dd>
+        <dd><a href="javascrit:;">30~35岁</a></dd>
+        <dd><a href="javascrit:;">35~40岁</a></dd>
+        <dd><a href="javascrit:;">40~45岁</a></dd>
+        <dd><a href="javascrit:;">45岁以上</a></dd><div class="clear"></div>
+    </dl>
+    <dl class="where">
+        <dt>籍贯</dt>
+        <dd class="sel"><a href="javascrit:;">不限</a></dd>
+        <dd><a href="javascrit:;">昆明</a></dd>
+        <dd><a href="javascrit:;">红河</a></dd>
+        <dd><a href="javascrit:;">文山</a></dd>
+        <dd><a href="javascrit:;">曲靖</a></dd>
+        <dd><a href="javascrit:;">昭通</a></dd><div class="clear"></div>
+    </dl>
+</div>
+<div class="screen">
+    已选条件
+    <a href="javascript:;">价格:1000</a>
+    <a href="javascript:;">年龄:30~35岁</a>
+    <a href="javascript:;">籍贯:昆明</a>
+</div>
+<script>
+    $(".price dd").click(function(){
+        var aContent=$(this).text();
+        var srceenHtml=$(".screen").html();
+        srceenHtml=srceenHtml+"<a class='price'>价格："+aContent+"</a>";
+        // alert(srceenHtml);
+        //有问题要重写
+        $(".screen").html(srceenHtml);
+    });
+    $(".filter dd").click(function(){
+        $(this).siblings().removeClass("sel");
+        $(this).addClass("sel");
+    });
+    var aNum=$(".screen a").length;
+    for (i=0;i<aNum;i++){
+        var w=$(".screen a").eq(i).css("width");
+        w=parseInt(w);
+        w=w-18+"px";
+        $(".screen a").eq(i).css("background-position",w);
+    }
+
+    $(".screen a").click(function(){
+        $(this).hide();
+        //$(".price dd").eq(0).addClass("sel");
+    });
+</script>
+<div class="listBar">
+    <a href="javascript:;" class="selcted arrow">综合排序</a>
+    <a href="javascript:;" class="arrow">预约数</a>
+    <a href="javascript:;" class="arrow">经验</a>
+    <a href="javascript:;" class="dbarrow">价格</a>
+    <a href="javascript:;" class="dbarrow">年龄</a>
+    <span>共1200名服务人员&nbsp;&nbsp;&nbsp;&nbsp;<b>1</b>/50页
+    </span><div class="clear">
+</div>
+</div>
+<script>
+    var aNum=$(".listBar a").length;
+    for (i=0;i<aNum;i++){
+        var w=$(".listBar a").eq(i).css("width");
+        w=parseInt(w);
+        w=w-15+"px";
+        $(".listBar a").eq(i).css("background-position",w);
+    }
+    $(".listBar .arrow").click(function(){
+        $(this).siblings().removeClass("selcted");
+        $(this).siblings().removeClass("selcted2");
+        $(this).addClass("selcted");
+    });
+    $(".listBar .dbarrow").click(function(){
+        $(this).siblings().removeClass("selcted");
+        $(this).siblings().removeClass("selcted2");
+        $(this).addClass("selcted2");
+    });
+</script>
+<ul class="ysList">
+    <%for(i=0;i<5;i++){%>
+    <li>
+        <img src="../img/face198_198.png" alt="昆明月嫂张阿姨">
+        <div class="ysInfo">
+        <p>
+            <a href="#" title="昆明月嫂张阿姨">张阿姨</a>
+            ￥<b>6666</b>元月<span>实名验证</span>
+            <span>健康证</span>
+            <span>母婴护理证</span>
+            <span>认证催乳师</span>
+        </p>
+        <p>
+            服务经验：<b>5</b>年<b>66</b>户
+            <span>云南昆明</span>
+            <span>35岁</span>
+            <span>汉族</span>
+            <span>高中</span>
+            <span>属虎</span>
+        </p>
+        <p>
+            <span>形像谈吐好</span>
+            <span>经验丰富</span>
+            <span>月子餐做得好</span>
+            <span>热情直爽</span>
+            <span>形像谈吐好</span>
+            <span>经验丰富</span>
+            <span>月子餐做得好</span>
+            <span>热情直爽</span><div class="clear"></div>
+        </p>
+        <p>
+           <b>6</b>&nbsp;人预约&nbsp;&nbsp;&nbsp;&nbsp;<b>6</b>&nbsp;条评价&nbsp;&nbsp;&nbsp;&nbsp;<b>6</b>&nbsp;人浏览
+        </p>
+        </div><div class="clear"></div>
+        <div class="btnsWrap">
+            <a href="#" title="已回电" class="btns">立即预约</a>
+            <a href="#" title="已回电" class="btns">查看详情</a>
+        </div>
+
+    </li>
+    <%}%><div class="clear"></div>
+</ul>
+<%include pageBar.html%>
+</div>
+<% include siteBtm.html %>
+</body>
+</html>
