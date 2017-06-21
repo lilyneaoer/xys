@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-arcList.css" />
+</head>
+<body>
+<% include siteTop.html %>
+<div class="breadNav">
+    <div class="mid1200"><span>当前位置</span>:<span>首页</span>><span>用户中心</span>><span>我的预约</span></div>
+</div>
+<div class="divMain">
+    <div class="listLeft">
+       <div class="leftBox arcMyzs">
+           <h3>母婴知识</h3>
+           <ul>
+               <li class="act"><a href="#" title="知识分类" target="_blank">知识分类</a></li>
+               <%for(i=1;i<6;i++){%>
+               <li><a href="#" title="知识分类" target="_blank">知识分类<%-i%></a></li>
+               <%}%>
+           </ul>
+       </div>
+        <div class="leftBox arcRdzs">
+            <h3>热点知识</h3>
+            <ul>
+                <%for(i=1;i<10;i++){%>
+                <li><a href="#" title="知识分类" target="_blank">热点知识热点知识<%-i%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="leftBox arcZxwz">
+            <h3>最新文章</h3>
+            <ul>
+                <%for(i=1;i<10;i++){%>
+                <li><a href="#" title="知识分类" target="_blank">最新文章最新文章<%-i%></a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+    <div class="arcWrap">
+        <div class="arc">
+            <h2 class="arcTitle">江苏破获10年最大海洋偷捕案:休渔期捕捞14万公斤</h2>
+            <h5 class="arcTime">发布时间：2017-06-06 15:25    </h5>
+            <p>
+                6月2日晚，连云港海监维权执法基地里灯火通明，江苏省渔政监督总队直属支队执法人员正在连夜清点被查扣的外省籍渔船非法捕捞渔获物，总数6800箱、14万公斤的鳀鱼和方氏云鳚、皮条鱼（又称海泥鳅）等非法捕捞渔获物在码头上堆积如山，现场触目惊心。被查扣的4艘各100多吨位的非法捕捞船已转押至连云港海监渔政执法基地，4艘大船系泊码头，一字排开，而船舷被人为涂掉的船号，更让此次违法捕捞涉刑案的性质更加恶劣！</p><p>
+            震惊！ 4艘可疑船只趁海雾高速逃遁
+            在位于连岛的连云港海监维权执法基地，中国渔政32501执法船上，连续24小时组织清点工作的副支队长张文龙略显疲惫，由于该偷捕案件是10年来江苏渔政查获的最大非法捕捞刑事案件，所以渔政人员放弃周末的休息时间。连夜加班清点非法捕捞渔获物。
+            张文龙介绍，这批休渔期内非法捕捞渔获物船只是江苏省渔政所属的中国渔政32501船和32516船，在5月31日连云港外海夜间执法查获的。当时，这4艘渔船处于高速航行状态，海上恰遇大雾，雷达锁定发现4艘可疑船只后，执法人员张楠、徐浩讯等立即乘坐快艇追击偷捕船，呼叫偷捕船“立即减速”，偷捕船减速后，执法人员登临检查并连夜扣押至燕尾港。
+        </p>
+            <a class="arcType" href="#" title="宝宝早餐食谱" target="_blank">文章分类</a>
+        </div>
+        <ul class="arcNav">
+            <li><a href="#" title="文章标题" target="_blank">上一篇：文章标题</a></li>
+            <li><a href="#" title="文章标题" target="_blank">下一篇：文章标题</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+
+</div>
+<% include siteBtm.html %>
+</body>
+</html>

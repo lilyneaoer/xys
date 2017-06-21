@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <% include pageHead.html %>
+    <link rel="stylesheet" type="text/css" href="../css/style-arcList.css" />
+</head>
+<body>
+<% include siteTop.html %>
+<div class="breadNav">
+    <div class="mid1200"><span>当前位置</span>:<span>首页</span>><span>用户中心</span>><span>我的预约</span></div>
+</div>
+<div class="divMain">
+    <div class="listLeft">
+       <div class="leftBox arcMyzs">
+           <h3>母婴知识</h3>
+           <ul>
+               <li class="act"><a href="#" title="知识分类" target="_blank">知识分类</a></li>
+               <%for(i=1;i<6;i++){%>
+               <li><a href="#" title="知识分类" target="_blank">知识分类<%-i%></a></li>
+               <%}%>
+           </ul>
+       </div>
+        <div class="leftBox arcRdzs">
+            <h3>热点知识</h3>
+            <ul>
+                <%for(i=1;i<10;i++){%>
+                <li><a href="#" title="知识分类" target="_blank">热点知识热点知识<%-i%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <div class="leftBox arcZxwz">
+            <h3>最新文章</h3>
+            <ul>
+                <%for(i=1;i<10;i++){%>
+                <li><a href="#" title="知识分类" target="_blank">最新文章最新文章<%-i%></a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+    <ul class="arcList">
+        <%for(i=1;i<10;i++){%>
+       <li>
+           <a href="#" title="宝宝早餐食谱" target="_blank"><img src="../img/arcImg.png" alt="文章标题"> </a>
+           <h4><a href="#" title="宝宝早餐食谱" target="_blank">宝宝早餐食谱</a> </h4>
+           <p>早饭与头天晚上的吃饭时间相隔约有10个小时以上，如果不及时进早餐，大脑处于饥饿状态。以这样的状态去上课，会精神不振，学习能力下降。研究表明，不吃早饭研究表明，不吃早饭研究表明，不吃早饭的孩子上第二节课的时候就开始出现注意力不集中、有小动作等现象，他们往往脑功能降低，学习效率下降，被误认为是多动症。而且早饭没......<a href="#" title="宝宝早餐食谱" target="_blank">【点击阅读详情】</a> <span>发布时间：2017-06-06 15:25</span></p><div class="clear"></div>
+           <a class="arcType" href="#" title="宝宝早餐食谱" target="_blank">文章分类</a>
+       </li>
+        <%}%>
+    </ul>
+    <div class="clear"></div>
+    <%include pageBar.html%>
+</div>
+<% include siteBtm.html %>
+</body>
+</html>

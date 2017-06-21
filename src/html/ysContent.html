@@ -7,6 +7,8 @@
     <meta name="description" content="" />
     <% include pageHead.html %>
     <link rel="stylesheet" type="text/css" href="../css/style-ysContent.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-calendar.css">
+    <script type="text/javascript" src="../js/calenda/simple-calendar.js"></script>
 </head>
 <body>
 <% include siteTop.html %>
@@ -139,7 +141,31 @@
         </div>
         <div class="ysGzpq">
             <h3 class="ysTitle">工作排期表</h3>
-            <%- img(740,400) %>
+
+            <div id="calendaI"></div>
+            <div id="calendaIFix"></div>
+            <div class="keyu">可预约
+            </div>
+            <div class="bukeyu">已预约
+            </div><div class="clear"></div>
+            <script>
+                var myCalendar=new SimpleCalendar('#calendaI');
+                myCalendar.updateSize('740px', '400px');
+                var options = {
+                    language: 'CH', //语言
+                    showLunarCalendar: true, //阴历
+                    showHoliday: false, //休假
+                    showFestival: true, //节日
+                    showLunarFestival: false, //农历节日
+                    showSolarTerm: false, //节气
+                    showMark: true, //标记
+                }
+                //排期
+                   for(i=0;i<26;i++){
+                       myCalendar.addMark('2017-6-'+i, 'test');
+                   }
+
+            </script>
         </div>
         <div class="ysYhpl">
             <h3 class="ysTitle">用户评论</h3>
@@ -154,9 +180,9 @@
         </div>
     </div>
     <div class="rightBarYs">
-       <div class="ysPqb">
-           排期表
-       </div>
+        <!--<div class="ysPqb">
+
+        </div>-->
         <div class="rBox rFwlc">
             <h3>
                 服务流程

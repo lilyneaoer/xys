@@ -1,0 +1,158 @@
+/*导入基础less样式*/
+@import "basic";
+@charset "UTF-8";
+.listLeft{
+  float:left;
+}
+.leftBox{
+  width:228px;
+  margin:0 0 10px 0;
+  border:1px solid #E2E0E0;
+  h3{
+    color: #FFF;
+    font-size: 18px;
+    text-indent: 90px;
+    height:38px;
+    line-height: 38px;
+  }
+  ul{
+    margin:5px 5px 0 5px;
+    li{
+      font-size: 16px;
+      padding:10px 0 10px 25px;
+      border-bottom:1px dashed #B4B4B4;
+      background: url(../slice/iconSz.png) no-repeat 5px center;
+    }
+    li:hover{
+      background: url(../slice/iconSzRed.png) no-repeat 5px center;
+    }
+    li:nth-last-child(1){
+      border:none;
+    }
+  }
+}
+.arcMyzs{
+  h3{
+    background:url("../slice/iconMyzs.png") no-repeat 55px center #DA4141;
+  }
+  ul{
+    margin:10px 5px 0 5px;
+    li{
+      padding:10px 0 10px 50px;
+      border-bottom:1px dashed #C5C5C5;
+      background: url(../slice/iconGrayCirle.png) no-repeat 25px center;
+    }
+    li:hover,li.act{
+      background:url("../slice/leftActive.png") no-repeat 0 center;
+    }
+  }
+}
+.arcRdzs{
+  h3{
+    background:url("../slice/iconRdzs.png") no-repeat 55px center #DA4141;
+  }
+}
+.arcZxwz {
+  h3 {
+    background: url("../slice/iconZxwz.png") no-repeat 55px center #DA4141;
+  }
+}
+.arcList{
+  float:right;
+  width:960px;
+  li{
+    height:145px;
+    margin:0 0 10px 0;
+    border:1px solid #F8F6F6;
+    background: #F7F5F5;
+    position: relative;
+    img{
+      float:left;
+      margin:5px;
+      width:180px;
+      height:132px;
+    }
+    h4{
+      color: #232323;
+      font-size: 18px;
+      margin:5px;
+      float:left;
+    }
+    p:nth-child(3){
+      width:755px;
+      float:left;
+      margin:0 0 0 5px;
+      color: #767676;
+      line-height: 1.5;
+      font-size: 16px;
+      text-indent: 2em;
+      a{
+        color: @xysRed;
+      }
+      span{
+        float:right;
+        color: #989696;
+        margin:0 15px 0 0;
+      }
+    }
+  }
+  li:hover{
+    border: 1px solid #D11D48;
+    box-shadow: 0 0 10px rgba(209, 29, 72, 0.5);
+  }
+}
+.arcType{
+  height: 26px;
+  line-height: 26px;
+  top:5px;
+  right:5px;
+  position: absolute;
+  color: #FFF;
+  padding: 0 7px 0 23px;
+  background: url(../slice/redTips.png) 0 center no-repeat #DA4141;
+}
+.arcType:hover{
+  color: #FBF4A3;
+}
+.arcWrap{
+  width:960px;
+  float:right;
+  .arc{
+    position: relative;
+    padding:15px;
+    background: #F7F5F5;
+    .arcTitle{
+      margin:20px;
+      text-align: center;
+      font-size: 28px;
+      color: #232323;
+    }
+    .arcTime{
+      margin:0 0 15px 0;
+      font-size: 16px;
+      text-align: center;
+      color: #989696;
+    }
+    p{
+      font-size: 18px;
+      text-indent: 2em;
+      color:#464646;
+      line-height: 1.5;
+      margin:0 0 10px 0;
+    }
+  }
+  .arcNav{
+    margin:10px;
+    font-size: 16px;
+    color: #858484;
+    li{
+
+    }
+    li:nth-child(1){
+      float:left;
+    }
+    li:nth-child(2){
+      float:right;
+    }
+  }
+}
