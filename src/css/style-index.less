@@ -100,7 +100,7 @@
       line-height: 3;
       text-align: center;
     }
-    a{
+    span{
       width:145px;
       height:50px;
       bottom:20px;
@@ -113,8 +113,33 @@
       display: block;
       position: absolute;
       border:1px solid @xysRed;
-      border-radius: 25px;
+      border-radius: 20px;
       background: @xysRed;
+    }
+    a{
+      width:145px;
+      height:50px;
+      bottom:20px;
+      margin-left:-72px;
+      color: #FFF;
+      font-size: 22px;
+      line-height: 50px;
+      text-align: center;
+      display: block;
+      position: absolute;
+      border:1px solid @xysRed;
+      border-radius: 20px;
+      background: @xysRed;
+      display: none;
+    }
+    a.tel{
+      left:380px;
+    }
+    a.more{
+      left:220px;
+    }
+    a:hover{
+      background: #DA4141;
     }
   }
   li:nth-child(1){
@@ -128,12 +153,12 @@
   }
   li:nth-child(3){
     color: #51504E;
-    background:url("../img/img03.png");
+    background:url("../img/img04.png");
   }
   li:nth-child(4){
     color: #653110;
     margin:0 0 4px 0;
-    background:url("../img/img04.png");
+    background:url("../img/img03.png");
   }
 }
 .yxysList{
@@ -199,8 +224,18 @@
         font-weight: normal;
       }
     }
-    img{
-      float:left;
+    a.selImg{
+      display: none;
+      img{
+        //float:left;
+      }
+    }
+    a.sel{
+      float: left;
+      display: block;
+      img{
+        //float:left;
+      }
     }
   }
   li:nth-child(1) div{
@@ -377,6 +412,42 @@
   height:287px;
   margin:20px 0;
   background: url("../img/albumBg.png") no-repeat center 0;
+  .rollPicsBtn{
+    position: relative;
+    a{
+      width:21px;
+      height:53px;
+      top:108px;
+      position: absolute;
+      text-indent: -9999px;
+    }
+    a:nth-child(1){
+      left:-35px;
+      background: url("../slice/leftArrow.png") no-repeat;
+    }
+    a:nth-child(2){
+      right:-35px;
+      background: url("../slice/rightArrow.png") no-repeat;
+    }
+  }
+  .rollPicsBox{
+    width:1200px;
+    height:267px;
+    margin:10px 0 0 0;
+    float:left;
+    overflow: hidden;
+    ul{
+      width:6000px;
+      height:267px;
+      li{
+        float:left;
+        margin:0 11px 0 0;
+        img{
+
+        }
+      }
+    }
+  }
 }
 .pxkb{
   margin:10px 0 20px 0;
@@ -400,8 +471,43 @@
 .serMap{
   margin:15px auto;
 }
+.mapInfo{
+  width:1200px;
+  height:500px;
+  margin:15px 0 0 0;
+  background: #EEEEEE;
+  border:1px solid #D5D5D5;
+  ul.dzInfo{
+    float:left;
+    width:320px;
+    li{
+      border-bottom: 1px solid #D5D5D5;
+      background: #F6F6F6;
+      p{
+        padding:9px 0 10px 30px;
+        font-size: 14px;
+        line-height: 1.5;
+        span{
+          color: @xysRed;
+        }
+      }
+    }
+    li:nth-last-child(1){
+      border: none;
+    }
+    li:hover{
+      cursor: pointer;
+    }
+  }
+  .allmap{
+    float: left;
+    width:878px;
+    height:498px;
+    border-left: 1px solid #D5D5D5;
+  }
+}
 .comIntro{
-  marign:10px;
+  margin:10px;
   font-size: 16px;
   color: #494949;
   p{

@@ -13,6 +13,10 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
     <link rel="stylesheet" type="text/css" href="../css/style-swf.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-simple.slide.css">
+    <script type="text/javascript" src="../js/simple.slide.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=67jMQ5DmYTe1TLMBKFUTcZAR"></script>
 </head>
 <body>
 
@@ -63,7 +67,7 @@
                 <li><a href="cuiru.html" title="催乳" target="_blank">催乳</a></li>
                 <li><a href="#" title="小儿推拿" target="_blank">小儿推拿</a></li>
                 <li><a href="#" title="技能培训" target="_blank">技能培训</a></li>
-                <li><a href="#" title="服务网站" target="_blank">服务网站</a></li>
+                <li><a href="#" title="加盟合作" target="_blank">加盟合作</a></li>
                 <li><a href="#" title="联系我们" target="_blank">联系我们</a></li>
             </ul>
         </div>
@@ -118,7 +122,7 @@
         $("#tab_content").html(htmlAd);
         $("#tab_Auto_Btn").html(htmlBtn);
         // 绑定
-        $("#tab_Auto_Btn a").powerSwitch({
+        /*$("#tab_Auto_Btn a").powerSwitch({
             classAdd: "tab_on",
             animation: "translate",
             duration:500,
@@ -126,14 +130,14 @@
             autoTime: 4500,
             hoverStop: true,
             container: $("#tab_Auto_Play")
-        });
+        });*/
         //设置点点点及按钮水平居中
         $("#tab_Auto_Play a").css("margin-top",-$("#tab_Auto_Play a").height()/2);
         $("#tab_Auto_Play").css("width",$(".divSwf").width()-17)
         $("#tab_Auto_Btn").css("margin-left",-$("#tab_Auto_Btn").width()/2);
-        var pageWidth=document.body.clientWidth;
+        var pageWidth=$(window).width();
+        $("#roll_Box").css("width",pageWidth);
         $("#roll_Box").css("margin-left",-pageWidth/2);
-        //alert(pageWidth);
         //控制按钮渐入渐出
         $("#roll_Box").hover(
                 function () {
@@ -179,20 +183,39 @@
     <ul class="serList">
         <li>
             <p>严格筛选优质月嫂，专业护理产妇与新生儿</p>
-            <a href="#" title="内容" target="_blank">&nbsp;&nbsp;找月嫂&nbsp;》</a>
+            <span>&nbsp;&nbsp;找月嫂&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
         </li>
         <li>
-            <p>严格筛选优质月嫂，专业护理产妇与新生儿</p>
-            <a href="#" title="内容" target="_blank">&nbsp;&nbsp;找月嫂&nbsp;》</a>
+            <p>小儿生活照料、护理以及科学教育、保育</p>
+            <span>&nbsp;&nbsp;育儿师&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
         </li>
         <li>
-            <p>严格筛选优质月嫂，专业护理产妇与新生儿</p>
-            <a href="#" title="内容" target="_blank">&nbsp;&nbsp;找月嫂&nbsp;》</a>
+            <p>为产妇解决哺乳期乳房问题</p>
+            <span>&nbsp;&nbsp;催乳师&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
         </li>
         <li>
-            <p>严格筛选优质月嫂，专业护理产妇与新生儿</p>
-            <a href="#" title="内容" target="_blank">&nbsp;&nbsp;找月嫂&nbsp;》</a>
+            <p>平衡阴阳  调和脏腑  行气活血  扶正祛邪</p>
+            <span>&nbsp;&nbsp;小儿推拿&nbsp;》</span>
+            <a class="tel" href="#" title="内容" target="_blank">&nbsp;&nbsp;查看更多&nbsp;》</a>
+            <a class="more" href="#" title="内容" target="_blank">&nbsp;&nbsp;立即预约&nbsp;》</a>
         </li><div class="clear"></div>
+        <script>
+            $(".serList li").hover(
+                function() {
+                    $(this).children("span").fadeOut();
+                    $(this).children("a").fadeIn();
+                },
+                function(){
+                    $(this).children("span").fadeIn();
+                    $(this).children("a").fadeOut();
+                });
+        </script>
     </ul>
     <div class="blockTitleII">
         <h3>优选月嫂</h3><a href="#" title="查看更多" target="_blank">查看更多</a>
@@ -313,39 +336,76 @@
                 <h4><a href="#" title="母婴护理师" target="_blank">母婴护理师</a></h4>
                 <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">照顾宝宝和妈妈</a></h5>
             </div>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
-                <h4><a href="#" title="母婴护理师" target="_blank">母婴护理师</a></h4>
-                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">照顾宝宝和妈妈</a></h5>
+                <h4><a href="#" title="母婴护理师" target="_blank">育儿师</a></h4>
+                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">0-3岁幼儿护理</a></h5>
             </div>
+            <a class="selImg sel" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
-                <h4><a href="#" title="母婴护理师" target="_blank">母婴护理师</a></h4>
-                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">照顾宝宝和妈妈</a></h5>
+                <h4><a href="#" title="母婴护理师" target="_blank">产后康复师</a></h4>
+                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">妈妈产后体质护理</a></h5>
             </div>
-            <a href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
-                <h4><a href="#" title="母婴护理师" target="_blank">母婴护理师</a></h4>
-                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">照顾宝宝和妈妈</a></h5>
+                <h4><a href="#" title="母婴护理师" target="_blank">催乳师</a></h4>
+                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">哺乳期指导与护理</a></h5>
             </div>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
-                <h4><a href="#" title="母婴护理师" target="_blank">母婴护理师</a></h4>
-                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">照顾宝宝和妈妈</a></h5>
+                <h4><a href="#" title="母婴护理师" target="_blank">小儿推拿师</a></h4>
+                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">婴幼儿中医保健</a></h5>
             </div>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
-                <h4><a href="#" title="母婴护理师" target="_blank">母婴护理师</a></h4>
-                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">照顾宝宝和妈妈</a></h5>
+                <h4><a href="#" title="母婴护理师" target="_blank">保健按摩师</a></h4>
+                <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">中医养生推拿保健</a></h5>
             </div>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <div class="clear"></div>
+        <script>
+            var i=0;
+            //var pxClock=self.setInterval("pxClocker()",1000);
+            for(var i=1;i<3;i++){
+
+            }
+            function pxClocker(){
+                alert(i);
+                $(".pxBlock li .sel").removeClass("sel");
+                $(".pxBlock li:nth-child("+i+")").children(".selImg").addClass("sel");
+                $(".pxBlock li:nth-child("+i+")").children(".selImg").removeClass("selImg");
+                setTimeout(function(){},5000);
+                i++;
+                alert(i);
+            };
+            $(".pxBlock li").hover(
+                    function() {
+                         $(".pxBlock li .sel").removeClass("sel");
+                        $(this).children(".selImg").addClass("sel");
+                        //$(this).children(".sel").fadeIn();
+                        $(this).children(".selImg").removeClass("selImg");
+                    },
+                    function(){
+                        //alert("ok");
+                        $(this).children(".sel").addClass("selImg");
+                        $(this).children(".selImg").removeClass("sel");
+                    }
+            );
+            $(".pxBlock").mouseleave(function(){
+                $(".pxBlock li:nth-child(1)").children(".selImg").addClass("sel");
+            });
+        </script>
     </ul>
     <div class="clear"></div>
     <a href="#" title="广告" target="_blank" class="indexPxAd"><img src="../img/img06.png" alt="广告"> </a>
@@ -395,7 +455,55 @@
 </div>
 <div class="pxAlbum">
     <div class="mid1200">
-        pxAlbum
+        <div class="rollPicsBtn" id="rollPicsBtn">
+            <a href="javascript:" class="rollPrev" data-rel="rollPics">left</a>
+            <a href="javascript:" class="rollNext" data-rel="rollPics">right</a>
+        </div>
+        <div class="rollPicsBox" id="rollPicsBox">
+            <ul>
+                
+                <li  class="rollPics">
+                    <a href="javascript:;" i="http://temp.im/800x600" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                    <a href="javascript:;" i="http://temp.im/800x610" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                </li>
+                
+                <li  class="rollPics">
+                    <a href="javascript:;" i="http://temp.im/800x600" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                    <a href="javascript:;" i="http://temp.im/800x610" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                </li>
+                
+                <li  class="rollPics">
+                    <a href="javascript:;" i="http://temp.im/800x600" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                    <a href="javascript:;" i="http://temp.im/800x610" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                </li>
+                
+                <li  class="rollPics">
+                    <a href="javascript:;" i="http://temp.im/800x600" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                    <a href="javascript:;" i="http://temp.im/800x610" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                </li>
+                
+                <li  class="rollPics">
+                    <a href="javascript:;" i="http://temp.im/800x600" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                    <a href="javascript:;" i="http://temp.im/800x610" class="Slide Two"><img src="http://temp.im/390x267" class=""/></a>
+                </li>
+                
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <script>
+            $("#rollPicsBtn a").powerSwitch({
+                classDisabled: '',
+                container: $("#rollPicsBox"),
+                number: 3,
+                autoTime:"3000"
+            });
+            $('.Two').simpleSlide({
+                "opacity":0.5,                  //背景透明度
+                "windowAction": "zoomIn",       //窗体进入动画
+                "imageAction": "bounceLeft",      //图片进入动画
+                "loadingImage":"../img/1.gif"      //加载图片
+            });
+        </script>
     </div>
 </div>
 <div class="mid1200">
@@ -426,7 +534,111 @@
     <div class="blockTitleIII">
         <h3>服务网点<span>招商加盟，财富热线 0871-12345678</span></h3>
     </div>
-    <img src="http://temp.im/1000x500" class="serMap"/>
+    <div class="mapInfo">
+        <ul class="dzInfo">
+            <li id="xysKm">
+                <p>
+                    昆明（总部）服务中心<br>
+                    <span>400-6666-760</span><br>
+                    昆明市北京路402号建设大厦19楼
+                </p>
+            </li>
+            <li id="xysQj">
+                <p>
+                    曲靖宣威市服务中心<br>
+                    <span>0874-7131998</span><br>
+                    宣威市振兴街中段艾贝孕婴生活馆1楼B区
+                </p>
+            </li>
+            <li id="xysHh">
+                <p>
+                    红河服务中心<br>
+                    <span>0873-3644669</span><br>
+                    蒙自市银河路53号1栋201室
+                </p>
+            </li>
+            <li id="xysZt">
+                <p>
+                    昭通市服务中心<br>
+                    <span>0870-2233077</span><br>
+                    昭阳区凤霞路佳路园小区2栋2单元401室
+                </p>
+            </li>
+            <li id="xysXs">
+                <p>
+                    西双版纳景洪市服务中心<br>
+                    <span>15368618977</span><br>
+                    景洪市天龙家具城三楼313室
+                </p>
+            </li>
+            <li id="xysWs">
+                <p>
+                    文山州文山市服务中心<br>
+                    <span>15187190403</span><br>
+                    文山市泰康小区金月汇月子主题酒店
+                </p>
+            </li>
+        </ul>
+        <div class="allmap" id="allmap">map</div>
+        <div class="clear"></div>
+        <script type="text/javascript">
+            $(function () {
+                ShowMap('102.726053,25.039174', '昆明星月嫂之家', '昆明市北京路402号建设大厦', '400-6666-760', '', '20');
+            });
+            $("#xysKm").click(function(){
+                ShowMap('102.726053,25.039174', '昆明星月嫂之家', '昆明市北京路402号建设大厦', '400-6666-760', '', '20');
+            });
+            $("#xysQj").click(function(){
+
+                ShowMap('104.103749,26.223731', '曲靖服务中心', '宣威市振兴街中段艾贝孕婴生活馆1楼B区', '0874-7131998', '', '20');
+            });
+            $("#xysHh").click(function(){
+
+                ShowMap('103.391758,23.36922', '红河服务中心', '蒙自市银河路53号1栋201室', '0873-3644669', '', '20');
+            });
+            $("#xysZt").click(function(){
+
+                ShowMap('103.718403,27.32406', '昭通市服务中心', '昭阳区凤霞路佳路园小区2栋2单元401室', '0870-2233077', '', '20');
+            });
+            $("#xysXs").click(function(){
+
+                ShowMap('103.718403,27.32406', '西双版纳景洪市服务中心', '景洪市天龙家具城三楼313室', '15368618977', '', '20');
+            });
+            $("#xysWs").click(function(){
+
+                ShowMap('103.718403,27.32406', '文山州文山市服务中心', '文山市泰康小区金月汇月子主题酒店', '15187190403', '', '20');
+            });
+            function getInfo(id) {
+                $.ajax({
+                    type: "POST",
+                    url: "WebUserControl/Contact/GetInfo.ashx",
+                    cache: false,
+                    async: false,
+                    data: { ID: id },
+                    success: function (data) {
+                        data = eval(data);
+                        var length = data.length;
+                        if (length > 0) {
+                            ShowMap(data[0]["Image"], data[0]["NewsTitle"], data[0]["Address"], data[0]["Phone"], data[0]["NewsTags"], data[0]["NewsNum"]);
+                        }
+                    }
+                });
+            }
+            function ShowMap(zuobiao, name, addrsee, phone, chuanzhen, zoom) {
+                var arrzuobiao = zuobiao.split(',');
+                var map = new BMap.Map("allmap");
+                map.centerAndZoom(new BMap.Point(arrzuobiao[0], arrzuobiao[1]), zoom);
+                map.addControl(new BMap.NavigationControl());
+                var marker = new BMap.Marker(new BMap.Point(arrzuobiao[0], arrzuobiao[1]));
+                map.addOverlay(marker);
+                var infoWindow = new BMap.InfoWindow('<p style="color: #4C4C4C;font-size:14px;;line-height: 1.5;">' + name + '<br>' + addrsee + '<br>' + phone +  chuanzhen + '</p>');
+                marker.addEventListener("click", function () {
+                    this.openInfoWindow(infoWindow);
+                });
+                marker.openInfoWindow(infoWindow);
+            }
+        </script>
+    </div>
     <div class="comIntro">
         <p>云南母婴护理领航者——星月嫂之家，公司注册成立于2012年，长期专注于母婴护理技术研究、母婴护理专业技术普及与母婴护理服务。公司一直立足于改善母婴服务行业低效率、参与者低保障、市场零散混乱。目前已经发展加盟商、合作商家30余家。</p><p>星月嫂之家自成立以来，已逐步建立完善了行业技术服务内容板块、服务标准规范和服务质量保障体系，目前已经推出育婴师、月嫂、育儿嫂、催乳师、小儿推拿、保健按摩等10多项服务。培养了近1000人的服务从业人员，服务了云南省7000多个家庭。</p>
     </div>
@@ -538,13 +750,13 @@
         <div class="errInfo">手机号码输入错误</div>
     </div>
 </div>
-<div class="rightBar">
+<!--<div class="rightBar">
     <img src="../slice/kfMM.png" alt="在线咨询">
     <p>在线咨询</p><div class="lineWhite">&nbsp;</div>
     <p>输入电话号码<br>免费给您回电</p>
     <input class="phone">
     <a href="javacript:;">免费通话</a>
-</div>
+</div>-->
 <script>
     $("#userLoginBtn").click(function(){
         $("#userBg,#userLogin").fadeIn();

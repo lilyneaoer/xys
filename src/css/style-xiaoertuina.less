@@ -1,0 +1,54 @@
+/*导入基础less样式*/
+@import "basic";
+@charset "UTF-8";
+.tnSwf{
+  width:100%;
+  height:600px;
+  position: relative;
+  border-top:5px solid #3C2510;
+  border-bottom:5px solid #3C2510;
+  img{
+    left:50%;
+    margin-left:-960px;
+    position: absolute;
+  }
+}
+.tnBg{
+  width:100%;
+  padding:10px 0;
+  background: url(../slice/tnBgFlower.png);
+}
+.divMain{
+  width:1200px;
+  padding:15px;
+  color: #0E0E0E;
+  font-size: 18px;
+  border:5px solid #3C2510;
+  background: #EEE4D1;
+  .title{
+    width:412px;
+    height:52px;
+    padding:10px 0 0 70px;
+    font-size: 22px;
+    color: #FAF6EF;
+    background: url(../slice/tnTitleBg.png) no-repeat;
+  }
+  .intro{
+    text-indent: 2em;
+    line-height: 1.5;
+  }
+  .colA{
+    img{
+      float:left;
+      margin:0 15px 0 0;
+      border:1px solid #C2BDC0;
+    }
+    .title{
+      float:left;
+    }
+    p:nth-child(3){
+      float:left;
+      width:600px;
+    }
+  }
+}

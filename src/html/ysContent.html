@@ -8,7 +8,10 @@
     <% include pageHead.html %>
     <link rel="stylesheet" type="text/css" href="../css/style-ysContent.css" />
     <link rel="stylesheet" type="text/css" href="../css/style-calendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-simple.slide.css">
     <script type="text/javascript" src="../js/calenda/simple-calendar.js"></script>
+    <script type="text/javascript" src="../js/simple.slide.min.js"></script>
 </head>
 <body>
 <% include siteTop.html %>
@@ -91,10 +94,24 @@
         </div>
         <div class="ysImgs">
             <h3 class="ysTitle">月嫂照片</h3>
-            <%- img(200,200,'ysImg') %>
-            <%- img(200,200,'ysImg') %>
-            <%- img(200,200,'ysImg') %>
-            <%- img(200,200,'ysImg') %><div class="clear"></div>
+            <div class="ysImgsBox">
+                <a href="javascript:;" i="../img/1d.jpg" class="Slide Two"><img src="../img/1.jpg" alt=""></a>
+                <a href="javascript:;" i="../img/2d.jpg" class="Slide Two"><img src="../img/2.jpg" alt=""></a>
+                <a href="javascript:;" i="../img/1d.jpg" class="Slide Two"><img src="../img/1.jpg" alt=""></a>
+                <a href="javascript:;" i="../img/2d.jpg" class="Slide Two"><img src="../img/2.jpg" alt=""></a>
+                <a href="javascript:;" i="../img/1d.jpg" class="Slide Two"><img src="../img/1.jpg" alt=""></a>
+                <a href="javascript:;" i="../img/2d.jpg" class="Slide Two"><img src="../img/2.jpg" alt=""></a>
+            </div>
+            <script type="text/javascript">
+                $('.Two').simpleSlide({
+                    "opacity":0.5,                  //背景透明度
+                    "windowAction": "zoomIn",       //窗体进入动画
+                    "imageAction": "bounceLeft",      //图片进入动画
+                    "loadingImage":"../img/1.gif"      //加载图片
+                });
+                //动画样式请参考 animate.css
+            </script>
+            <div class="clear"></div>
         </div>
         <div class="ysZwjn">
             <h3 class="ysTitle">掌握技能</h3>
