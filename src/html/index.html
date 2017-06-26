@@ -194,68 +194,58 @@
                 <h4><a href="#" title="母婴护理师" target="_blank">育儿师</a></h4>
                 <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">0-3岁幼儿护理</a></h5>
             </div>
-            <a class="selImg sel" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt2.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
                 <h4><a href="#" title="母婴护理师" target="_blank">产后康复师</a></h4>
                 <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">妈妈产后体质护理</a></h5>
             </div>
-            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt3.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
                 <h4><a href="#" title="母婴护理师" target="_blank">催乳师</a></h4>
                 <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">哺乳期指导与护理</a></h5>
             </div>
-            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt4.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
                 <h4><a href="#" title="母婴护理师" target="_blank">小儿推拿师</a></h4>
                 <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">婴幼儿中医保健</a></h5>
             </div>
-            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt5.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <li>
             <div>
                 <h4><a href="#" title="母婴护理师" target="_blank">保健按摩师</a></h4>
                 <h5><a href="#" title="照顾宝宝和妈妈" target="_blank">中医养生推拿保健</a></h5>
             </div>
-            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt1.png" alt=""照顾宝宝和妈妈> </a>
+            <a class="selImg" href="#" title="照顾宝宝和妈妈" target="_blank"><img src="../img/pictt6.png" alt=""照顾宝宝和妈妈> </a>
         </li>
         <div class="clear"></div>
         <script>
+            var timer=null;
             var i=0;
-            //var pxClock=self.setInterval("pxClocker()",1000);
-            for(var i=1;i<3;i++){
+            $(function(){
+                $(".pxBlock li").mouseover(function(){
+                    clearInterval(timer);
+                });
+                $(".pxBlock li").mouseover(function(){
+                    $(this).stop().animate({width:"326px"},200).siblings().stop().animate({width:"163px"},200)
+                });
+                $(".pxBlock li").mouseout(function(){
+                    timer=setInterval("startMove()",4000)
+                });
 
-            }
-            function pxClocker(){
-                alert(i);
-                $(".pxBlock li .sel").removeClass("sel");
-                $(".pxBlock li:nth-child("+i+")").children(".selImg").addClass("sel");
-                $(".pxBlock li:nth-child("+i+")").children(".selImg").removeClass("selImg");
-                setTimeout(function(){},5000);
+            })
+            function startMove(){
                 i++;
-                alert(i);
+                if(i>$(".pxBlock li").length-1){i=0}
+                $(".pxBlock li").stop().eq(i).animate({width:"326px"},200).siblings().stop().animate({width:"163px"},200)
             };
-            $(".pxBlock li").hover(
-                    function() {
-                         $(".pxBlock li .sel").removeClass("sel");
-                        $(this).children(".selImg").addClass("sel");
-                        //$(this).children(".sel").fadeIn();
-                        $(this).children(".selImg").removeClass("selImg");
-                    },
-                    function(){
-                        //alert("ok");
-                        $(this).children(".sel").addClass("selImg");
-                        $(this).children(".selImg").removeClass("sel");
-                    }
-            );
-            $(".pxBlock").mouseleave(function(){
-                $(".pxBlock li:nth-child(1)").children(".selImg").addClass("sel");
-            });
+            timer=setInterval("startMove()",4000);
         </script>
     </ul>
     <div class="clear"></div>
